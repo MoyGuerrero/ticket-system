@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Atender Ticket</title>
 </head>
 
@@ -13,11 +14,10 @@
         <div class="flex items-center justify-between mb-2">
             <div>Logo</div>
             <div>
-                <label class="text-sm font-bold" for="">Usuario: <span class="uppercase">Moises
-                        Guerrero</span></label>
+                <label class="text-sm font-bold" for="">Usuario: <span class="uppercase" id="nombreUsuario"></span></label>
             </div>
             <button
-                class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer text-white hover:bg-red-700">
+                class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer text-white hover:bg-red-700" id="cerrarSesion">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
@@ -48,15 +48,54 @@
                 <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Estatus</label>
                 <select id="countries"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                    <option selected>Choose a country</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    <option value="T" selected>Todos</option>
+                    <option value="A">Activo</option>
+                    <option value="EP">En Proceso</option>
+                    <option value="F">Finalizado</option>
                 </select>
             </div>
         </div>
+
+
+        <div class="relative overflow-x-auto mt-10">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500" id="tblTicket">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            id ticket
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            titulo
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            descripcion
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Quien lo solicita
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Fecha Creacion
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Estatus
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Fecha Finalizado
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Acción
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </main>
+
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/atender-ticket.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
