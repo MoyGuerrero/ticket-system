@@ -26,4 +26,23 @@ const validarJWT = (req, res = response, next) => {
 }
 
 
-module.exports = validarJWT;
+
+const comprobarJWT = async (token = "") => {
+    try {
+        if (!token) {
+            return null;
+        }
+
+        const usuario = jwt.verify(token, process.env.SECRET_PASSWORD_JWT);
+        const { iat, exp, ...params } = usuario;
+        return params;
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+
+module.exports = {
+    validarJWT,
+    comprobarJWT
+};

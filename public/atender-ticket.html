@@ -14,10 +14,12 @@
         <div class="flex items-center justify-between mb-2">
             <div>Logo</div>
             <div>
-                <label class="text-sm font-bold" for="">Usuario: <span class="uppercase" id="nombreUsuario"></span></label>
+                <label class="text-sm font-bold" for="">Usuario: <span class="uppercase"
+                        id="nombreUsuario"></span></label>
             </div>
             <button
-                class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer text-white hover:bg-red-700" id="cerrarSesion">
+                class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer text-white hover:bg-red-700"
+                id="cerrarSesion">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
@@ -59,7 +61,7 @@
 
         <div class="relative overflow-x-auto mt-10">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500" id="tblTicket">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 text-center">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             id ticket
@@ -78,6 +80,9 @@
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Estatus
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Usuario Atendio
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Fecha Finalizado

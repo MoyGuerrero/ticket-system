@@ -12,6 +12,10 @@
     <main class="container mx-auto p-4">
         <div class="flex items-center justify-between mb-2">
             <div>Logo</div>
+            <div>
+                <label class="text-sm font-bold" for="">Usuario: <span class="uppercase"
+                        id="nombreUsuario"></span></label>
+            </div>
             <button
                 class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer text-white hover:bg-red-700">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -48,7 +52,7 @@
 
         <div class="relative overflow-x-auto mt-10">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500" id="tblTicket">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 text-center">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             id ticket
@@ -76,8 +80,8 @@
                         </th>
                     </tr>
                 </thead>
-                 <tbody>
-                </tbody> 
+                <tbody>
+                </tbody>
             </table>
         </div>
 
@@ -109,9 +113,9 @@
                     <div class="p-4 md:p-5 space-y-4">
                         <form class="max-w-lg mx-auto" id="myForm">
                             <div class="mb-5">
-                                <label for="mensaje" class="block mb-2 text-sm font-medium text-gray-900">Titulo del
+                                <label for="titulo" class="block mb-2 text-sm font-medium text-gray-900">Titulo del
                                     ticket</label>
-                                <input type="text" id="mensaje" name="mensaje"
+                                <input type="text" id="titulo" name="titulo"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                     placeholder="ej: Error en la pantalla" required />
                             </div>
